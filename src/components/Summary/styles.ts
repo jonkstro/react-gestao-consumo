@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: -8rem;
     @media (max-width: 600px) {
         grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     div {
@@ -15,7 +18,7 @@ export const Container = styled.div`
         padding: 1.5rem 2rem;
         border-radius: 0.25rem;
         color: var(--text-title);
-    
+        box-shadow: rgb(100 100 111 / 50%) 0px 5px 5px 0px;
         header {
             display: flex;
             align-items: center;
