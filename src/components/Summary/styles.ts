@@ -10,6 +10,7 @@ export const Container = styled.div`
     }
 
     div {
+        cursor: pointer;
         background: var(--shape);
         padding: 1.5rem 2rem;
         border-radius: 0.25rem;
@@ -41,6 +42,11 @@ export const Container = styled.div`
             font-size: 2rem;
             font-weight: 500;
             line-height: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-title);
         }
 
         &.highlight-background {

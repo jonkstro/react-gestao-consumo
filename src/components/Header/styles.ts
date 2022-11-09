@@ -18,7 +18,7 @@ export const Content = styled.div`
     }
 
     button {
-        font-size: 1rem;
+        font-size: 1.2rem;
 
         color: #fff;
         background: var(--blue-light);
@@ -45,7 +45,7 @@ export const Content = styled.div`
     }
     img {
         max-width: 10rem;
-        max-height: 100rem;
+        max-height: 10rem;
     }
     
     h3 {
