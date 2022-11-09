@@ -132,8 +132,8 @@ export default function Modal() {
             </Grid>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Subscribe</Button>
+          <Button onClick={handleClose}>Cancelar</Button>
+          <Button onClick={handleClose}>Enviar</Button> {/* Adicionar função depois de cadastrar */}
         </DialogActions>
       </Dialog>
     </div>
