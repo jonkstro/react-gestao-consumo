@@ -2,15 +2,7 @@
 import React, { useState } from "react";
 import { AuthForm, AuthFormContainer, AuthFormContent, SubmitButton } from "./styles";
 import { Grid } from '@mui/material';
-
-import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-
 
 
 export function Auth() {
@@ -23,11 +15,11 @@ export function Auth() {
   if (authMode === "signin") {
     return (
       <AuthFormContainer>
-        <AuthForm>
+        <AuthForm action="" method="POST">
           <AuthFormContent>
             <h3 className="Auth-form-title">Logar</h3>
             <div className="text-center">
-              Não tem conta ainda?{" "}
+              Não tem uma conta ainda?  {" "}
               <span className="link-primary" onClick={changeAuthMode}>
                 Cadastrar
               </span>
@@ -35,7 +27,6 @@ export function Auth() {
             <Grid container spacing={0}>
                 <Grid item xs={12}>      
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="email"
                         id="email"
@@ -48,7 +39,6 @@ export function Auth() {
                 </Grid>
                 <Grid item xs={12}> 
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="password"
                         id="password"
@@ -74,11 +64,11 @@ export function Auth() {
 
   return (
     <AuthFormContainer>
-      <AuthForm>
+      <AuthForm action="" method="POST">
       <AuthFormContent>
           <h3 className="Auth-form-title">Cadastrar</h3>
           <div className="text-center">
-            Já tem conta?{" "}
+            Já tem uma conta cadastrada?{" "}
             <span className="link-primary" onClick={changeAuthMode}>
               Logar
             </span>
@@ -86,7 +76,6 @@ export function Auth() {
             <Grid container spacing={0}>
                 <Grid item xs={12}>      
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="name"
                         id="name"
@@ -99,7 +88,6 @@ export function Auth() {
                 </Grid>
                 <Grid item xs={12}> 
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="username"
                         id="username"
@@ -112,7 +100,6 @@ export function Auth() {
                 </Grid>
                 <Grid item xs={12}>      
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="email"
                         id="email"
@@ -125,7 +112,6 @@ export function Auth() {
                 </Grid>
                 <Grid item xs={12}> 
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="password"
                         id="password"
@@ -138,7 +124,6 @@ export function Auth() {
                 </Grid>
                 <Grid item xs={12}> 
                     <TextField
-                        autoFocus
                         margin="dense"
                         name="confirm_password"
                         id="confirm_password"

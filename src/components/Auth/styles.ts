@@ -5,9 +5,13 @@ export const AuthFormContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: auto;
     margin-top: -10rem;
     border-radius: 0.25rem;
     color: var(--text-title);
+    @media (max-width: 600px) {
+            width: 90%;
+        }
 `;
 
 export const AuthForm = styled.form`
