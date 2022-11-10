@@ -1,15 +1,14 @@
-import { Header } from '../../components/Header';
-import { Dashboard } from '../../components/Dashboard';
-import { GlobalStyle } from '../../styles/global';
 import React from "react";
-import { Auth } from './auth';
+import { HeaderLogin } from '../../components/HeaderLogin';
+import { GlobalStyle } from '../../styles/global';
+import { Auth } from '../../components/Auth';
 
 
 
 export default function Logar() {
   return (
     <>
-      <Header />
+      <HeaderLogin />
       <Auth />
       <GlobalStyle />
     </>
