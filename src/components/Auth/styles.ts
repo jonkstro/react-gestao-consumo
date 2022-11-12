@@ -10,7 +10,7 @@ export const AuthFormContainer = styled.div`
     border-radius: 0.25rem;
     /* color: var(--text-title); */
     @media (max-width: 600px) {
-            width: 90%;
+            width: 95%;
         }
 `;
 
@@ -32,18 +32,26 @@ export const AuthFormContent = styled.div`
         color: var(--blue);
         font-weight: 600;
     }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+    }
 `;
 
 export const AuthFormTitle = styled.div`
     text-align: center;
     margin-bottom: 1em;
-    font-size: 24px;
+    font-size: 2rem;
     color: rgb(34, 34, 34);
     font-weight: 800;
 `;
 
 export const SubmitButton = styled.button`
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     background: var(--blue);
     border: 0;
