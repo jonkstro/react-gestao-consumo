@@ -1,9 +1,15 @@
 import logoImg from '../../assets/logo.png'
-import Modal from '../Modal';
 import { Container, Content } from './styles'
 
-export function Header() {
 
+// criar interface que irá receber as propriedades do MODAL:
+interface HeaderProps {
+    onOpenNewDeviceModal: ()=> void;
+}
+
+
+// Header irá agora receber as propriedades enviadas no APP.tsx
+export function Header({onOpenNewDeviceModal}: HeaderProps) {
 
     return (
         <>
@@ -13,10 +19,9 @@ export function Header() {
                     <img src={logoImg} alt="dt money" />
                     <h3>GESTÃO DE CONSUMO</h3>
                 </div>
-                <Modal />
-                {/* <button type="button">
+                <button type="button" onClick={onOpenNewDeviceModal}>
                     Novo Dispositivo
-                </button> */}
+                </button>
             </Content>
         </Container>
         </>

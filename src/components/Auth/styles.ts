@@ -8,7 +8,7 @@ export const AuthFormContainer = styled.div`
     margin: auto;
     margin-top: -10rem;
     border-radius: 0.25rem;
-    color: var(--text-title);
+    /* color: var(--text-title); */
     @media (max-width: 600px) {
             width: 90%;
         }
@@ -26,12 +26,6 @@ export const AuthForm = styled.form`
 export const AuthFormContent = styled.div`
     padding-left: 12%;
     padding-right: 12%;
-
-    label {
-        font-size: 14px;
-        font-weight: 600;
-        color: rgb(34, 34, 34);
-    }
 
     span {
         cursor: pointer;

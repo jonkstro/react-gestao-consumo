@@ -18,6 +18,7 @@ export const Content = styled.div`
     }
 
     button {
+         
         font-size: 1.2rem;
 
         color: #fff;

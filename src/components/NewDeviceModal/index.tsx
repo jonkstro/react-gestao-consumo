@@ -5,27 +5,22 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { useState } from 'react';
-import { Container, Content } from './styles';
+import { Content } from './styles';
 import { Grid } from '@mui/material';
 
-export default function Modal() {
-  const [open, setOpen] = useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+// criar interface que irá receber os dados do APP.tsx
+interface NewDeviceModalProps {
+  isOpen: boolean;
+  onRequestClose: ()=> void;
+}
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+export default function NewDeviceModal({ isOpen, onRequestClose }: NewDeviceModalProps) {
+
 
   return (
     <div>
-      <Container onClick={handleClickOpen}>
-        Novo dispositivo
-      </Container>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={isOpen} onClose={onRequestClose}>
         <DialogTitle><h3>Adicionar dispositivo: </h3></DialogTitle>
         <DialogContent>
             <Grid container spacing={0}>
@@ -34,19 +29,38 @@ export default function Modal() {
                         Preencha os dados abaixo para adicionar o seu novo dispositivo.
                     </DialogContentText>
                 </Grid>
-                <Grid item xs={12}>      
-                    <TextField
-                        autoFocus
-                        margin="dense"
-                        name="email"
-                        id="email"
-                        label="Email"
-                        type="email"
-                        fullWidth
-                        variant="standard"
-                        placeholder='Email do Usuário: '
-                        />
-                </Grid>
+                <Content>
+                    <div>
+                        <Grid item xs={12}>      
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                name="mac"
+                                id="mac"
+                                label="MAC"
+                                type="email"
+                                fullWidth
+                                variant="standard"
+                                placeholder='ID MAC do dispositivo: '
+                                />
+                        </Grid>
+                    </div>
+                    <div>
+                        <Grid item xs={12}>      
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                name="email"
+                                id="email"
+                                label="Email"
+                                type="email"
+                                fullWidth
+                                variant="standard"
+                                placeholder='Email do Usuário: '
+                                />
+                        </Grid>
+                    </div>
+                </Content>
                 <Grid item xs={12}> 
                     <TextField
                         autoFocus
@@ -78,13 +92,13 @@ export default function Modal() {
                         <TextField
                             autoFocus
                             margin="dense"
-                            name="municipio"
-                            id="municipio"
-                            label="Municipio"
+                            name="cidade"
+                            id="cidade"
+                            label="Cidade"
                             type="text"
                             fullWidth
                             variant="standard"
-                            placeholder='Municipio da casa que o Dispositivo tá instalado: '
+                            placeholder='Cidade da casa que o Dispositivo tá instalado: '
                             />
                     </div>
                     <div>
@@ -132,8 +146,8 @@ export default function Modal() {
             </Grid>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancelar</Button>
-          <Button onClick={handleClose}>Enviar</Button> {/* Adicionar função depois de cadastrar */}
+          <Button onClick={onRequestClose}>Cancelar</Button>
+          <Button onClick={onRequestClose}>Enviar</Button> {/* Adicionar função depois de cadastrar */}
         </DialogActions>
       </Dialog>
     </div>
