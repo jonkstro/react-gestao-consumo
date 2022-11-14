@@ -1,34 +1,13 @@
 import { Container } from "./styles";
 import dispositivoImg from '../../assets/dispositivo1.png';
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
+import { useDevices } from "../../hooks/useDevices";
 
 
-// criar interface do objeto que irá ser recebido da api
-interface Device {
-    id: number;
-    mac: string;
-    email: string;
-    rua: string;
-    bairro: string;
-    cidade: string;
-    estado: string;
-    latitude: number;
-    longitude: number;
-    status: string;
-}
+
 
 export function Summary() {
 
-    // criar variável de array que armazenará os objetos da api:
-    const [devices, setDevices] = useState<Device[]>([]);
-    
-    // criar função que irá realizar o GET da API
-    // realizar a busca na API ao carregar a página:
-    useEffect(()=> {
-        api.get('/devices')
-            .then(response => setDevices(response.data.devices))
-    }, []);
+    const { devices } = useDevices();
 
 
     return (

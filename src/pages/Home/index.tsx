@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dashboard } from "../../components/Dashboard";
 import { Header } from "../../components/Header";
 import NewDeviceModal from "../../components/NewDeviceModal";
+import { DevicesProvider } from "../../hooks/useDevices";
 import { GlobalStyle } from "../../styles/global";
 
 
@@ -19,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <DevicesProvider>
       {/* ENVIAR AO HEADER AS PROPRIEDADES DO  ESTADO DO BOTAO DO MODAL */}
       <Header onOpenNewDeviceModal={handleOpenNewDeviceModal} />
       <Dashboard />
@@ -29,6 +30,6 @@ export default function Home() {
         onRequestClose={handleCloseNewDeviceModal}
       />
       <GlobalStyle />
-    </>
+    </DevicesProvider>
   );
 }
