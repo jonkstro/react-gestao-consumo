@@ -1,11 +1,11 @@
 
 
 <h1 align="center">
-     Nome do Site
+     Dt Money
 </h1>
 
 <h4 align="left">
-    Slogan do Projeto. Fazer um texto curto sobre o que é o projeto.
+    Acompanhando fácil suas despesas.
 </h4>
 
 ---
