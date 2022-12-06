@@ -6,37 +6,49 @@ export function TransactionsTable() {
             <table>
                 <thead>
                     <tr>
-                        <th>Título</th>
-                        <th>Valor</th>
-                        <th>Categoria</th>
-                        <th>Data</th>
+                        <th>DISPOSITIVO</th>
+                        <th>STATUS</th>
+                        <th>LEITURA</th>
+                        <th>DATA</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>Desenvolvimento de site</td>
-                        <td className="withdraw">- R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>20/02/2022</td>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="deposit">ONLINE</td>
+                        <td>100 kWh</td>
+                        <td>20/02/2022 - 06h 00m</td>
                     </tr>
                     <tr>
-                        <td>Desenvolvimento de site</td>
-                        <td className="withdraw">- R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>20/02/2022</td>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="withdraw">OFFLINE</td>
+                        <td>OFFLINE</td>
+                        <td>20/02/2022 - 07h 00m</td>
                     </tr>
                     <tr>
-                        <td>Desenvolvimento de site</td>
-                        <td className="deposit">R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>20/02/2022</td>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="deposit">ONLINE</td>
+                        <td>110 kWh</td>
+                        <td>20/02/2022 - 08h 00m</td>
                     </tr>
                     <tr>
-                        <td>Desenvolvimento de site</td>
-                        <td className="deposit">R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>20/02/2022</td>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="deposit">ONLINE</td>
+                        <td>120 kWh</td>
+                        <td>20/02/2022 - 09h 00m</td>
+                    </tr>
+                    <tr>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="deposit">ONLINE</td>
+                        <td>130 kWh</td>
+                        <td>20/02/2022 - 10h 00m</td>
+                    </tr>
+                    <tr>
+                        <td>Dispositivo: D6:9A:D3:EA:ED:4E</td>
+                        <td className="deposit">ONLINE</td>
+                        <td>140 kWh</td>
+                        <td>20/02/2022 - 11h 00m</td>
                     </tr>
                 </tbody>
             </table>

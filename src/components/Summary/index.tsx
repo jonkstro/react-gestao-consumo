@@ -14,7 +14,7 @@ export function Summary() {
         <Container>
             {devices.map(device => (
                 <div key={device.id}>
-                    <a href={String(device.id)}>
+                    <a href={"plataforma/"+String(device.id)}>
                         <header>
                             <p>Dispositivo: <span className={device.status}>{device.mac}</span></p>   
                             <img src={dispositivoImg} alt="logo de imagem de dispositivo" />
