@@ -45,21 +45,21 @@ const DevicesContext = createContext<DevicesContextData>(
 );
 
 
-export function DevicesProvider({children}: DevicesProviderProps) {
+export function DevicesProvider({ children }: DevicesProviderProps) {
     // criar variável de array que armazenará os objetos da api:
     const [devices, setDevices] = useState<Device[]>([]);
     
     // criar função que irá realizar o GET da API
     // realizar a busca na API ao carregar a página:
     useEffect(()=> {
-        api.get('/devices')
+        api.get('/dispositivos')
             .then(response => setDevices(response.data.devices))
     }, []);
 
     // criar função assincrona que realizará o POST da API
     async function createDevice(deviceInput: DeviceInput) {
         // salvar os objetos na api
-        const response = await api.post('/devices', {
+        const response = await api.post('/dispositivos', {
             ...deviceInput,
             // createdAt: new Date();
         });

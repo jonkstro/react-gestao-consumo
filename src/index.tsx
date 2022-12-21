@@ -72,11 +72,11 @@ createServer({
     this.namespace = 'api';
 
     // CRIAR A ROTA GET
-    this.get('/devices', ()=> {
+    this.get('/dispositivos', ()=> {
       return this.schema.all('device')
     })
 
-    this.post('/devices', (schema, request) => {
+    this.post('/dispositivos', (schema, request) => {
       const data = JSON.parse(request.requestBody);
       return schema.create('device', data)
     })
