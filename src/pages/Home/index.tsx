@@ -5,9 +5,7 @@ import NewDeviceModal from "../../components/NewDeviceModal";
 import { DevicesProvider } from "../../hooks/useDevices";
 import { GlobalStyle } from "../../styles/global";
 
-
 export default function Home() {
-
   // criar useState que irá abrir ou fechar o MODAL de novo dispositivo:
   const [isNewDeviceModalOpen, setIsNewDeviceModalOpen] = useState(false);
 
@@ -25,7 +23,7 @@ export default function Home() {
       <Header onOpenNewDeviceModal={handleOpenNewDeviceModal} />
       <Dashboard />
       {/* ENVIAR AO MODAL AS PROPRIEDADES DO ESTADO DO BOTAO DO MODAL */}
-      <NewDeviceModal 
+      <NewDeviceModal
         isOpen={isNewDeviceModalOpen}
         onRequestClose={handleCloseNewDeviceModal}
       />

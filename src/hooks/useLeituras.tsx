@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { api } from "../services/api";
 
 // criar interface de componentes que o Provider irá receber no index
@@ -40,6 +46,6 @@ export function LeiturasProvider({ children }: LeiturasProviderProps) {
 
 // criar função de hook que será utilizada
 export function useDevices() {
-    const context = useContext(LeiturasContext);
-    return context;
+  const context = useContext(LeiturasContext);
+  return context;
 }
